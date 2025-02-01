@@ -38,14 +38,38 @@
 <body class="bg-white">
     <div class="container-xxl bg-dark p-0">
         <!-- Top Bar Start -->
-        <div class="bg-dark text-white py-2 sticky-top">
+        <div class="bg-light text-dark py-2 sticky-top">
             <div class="container d-flex justify-content-between align-items-center">
                 <div>
-                    <span>🚧This website is currently under construction. Stay tuned for updates!</span>
+                    <span class="text-flashy">🚧 This website is currently under construction. Stay tuned for
+                        updates!</span>
+
+                    <style>
+                        .text-flashy {
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                            color: #224eff8a;
+                            /* A bright orange color */
+                            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+                            animation: flashy 1.5s infinite alternate;
+                        }
+
+                        @keyframes flashy {
+                            0% {
+                                opacity: 0.7;
+                                transform: scale(1);
+                            }
+
+                            100% {
+                                opacity: 1;
+                                transform: scale(1.1);
+                            }
+                        }
+                    </style>
                 </div>
                 <div>
                     <a href="contact.html" class="btn btn-primary hover:background-color:white text-dark btn-sm">
-                        Reach Us Out
+                        <b>Reach Us Out</b>
                     </a>
                 </div>
             </div>

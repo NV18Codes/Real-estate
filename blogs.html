@@ -33,7 +33,7 @@
 </head>
 
 <body class="bg-white">
-    <div class="container-xxl bg-dark p-0">
+    <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner"
             class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -45,8 +45,8 @@
 
 
         <!-- Navbar Start -->
-        <div class="container-fluid bg-dark sticky-top ">
-            <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid bg-dark sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <a href="index.html" class="navbar-brand d-flex align-items-center">
                     <!-- Logo -->
                     <img src="img/logo-bg.png" alt="Logo" class="ms-2 img-fluid"
@@ -69,84 +69,82 @@
                         <li class="nav-item"><a href="index.html" class="nav-link ">Home</a></li>
                         <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
                         <a href="service.html" class="nav-item nav-link "> Services</a>
-                        <a href="project.html" class="nav-item nav-link "> Projects</a>
+                        <a href="project.html" class="nav-item nav-link"> Projects</a>
                         <li class="nav-item"><a href="blogs.html" class="nav-link active">Blogs</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
-    </div>
-    <!-- Navbar End -->
+        <!-- Navbar End -->
 
-    <!-- Header Start -->
-    <div class="container-fluid header bg-white p-0 mt-5" id="new-header">
-        <style>
-            .bg-gradient-to-r {
-                background-image: linear-gradient(to right, #c4cbd3, #b7937d);
-                /* Ensure the gradient is vibrant yet elegant */
-            }
+        <div class="container-fluid header bg-white p-0 mt-5" id="new-header">
+            <style>
+                .bg-gradient-to-r {
+                    background-image: linear-gradient(to right, #c4cbd3, #b7937d);
+                    /* Ensure the gradient is vibrant yet elegant */
+                }
 
-            /* Adjust header text size on different screen sizes */
-            @media (max-width: 767px) {
+                /* Adjust header text size on different screen sizes */
+                @media (max-width: 767px) {
+                    #new-header h1 {
+                        font-size: 2.5rem;
+                        /* Smaller size for smaller screens */
+                    }
+                }
+
+                @media (min-width: 768px) {
+                    #new-header h1 {
+                        font-size: 4rem;
+                        /* Larger size for larger screens */
+                    }
+                }
+
+                /* Animation for breadcrumb */
+                .breadcrumb {
+                    animation: fadeIn 1.5s ease-in-out;
+                }
+
+                /* Subtle fadeIn animation */
+                @keyframes fadeIn {
+                    0% {
+                        opacity: 0;
+                    }
+
+                    100% {
+                        opacity: 1;
+                    }
+                }
+
+                /* Header Text Styling */
                 #new-header h1 {
-                    font-size: 2.5rem;
-                    /* Smaller size for smaller screens */
-                }
-            }
-
-            @media (min-width: 768px) {
-                #new-header h1 {
-                    font-size: 4rem;
-                    /* Larger size for larger screens */
-                }
-            }
-
-            /* Animation for breadcrumb */
-            .breadcrumb {
-                animation: fadeIn 1.5s ease-in-out;
-            }
-
-            /* Subtle fadeIn animation */
-            @keyframes fadeIn {
-                0% {
-                    opacity: 0;
+                    font-size: 3.5rem;
+                    font-weight: bold;
+                    color: #001F3F;
+                    /* Deep contrasting color */
                 }
 
-                100% {
-                    opacity: 1;
+                /* Adjust breadcrumb style */
+                .breadcrumb {
+                    font-size: 1rem;
                 }
-            }
+            </style>
 
-            /* Header Text Styling */
-            #new-header h1 {
-                font-size: 3.5rem;
-                font-weight: bold;
-                color: #001F3F;
-                /* Deep contrasting color */
-            }
-
-            /* Adjust breadcrumb style */
-            .breadcrumb {
-                font-size: 1rem;
-            }
-        </style>
-
-        <div class="row g-0 align-items-center flex-column-reverse flex-md-row bg-gradient-to-r">
-            <div class="col-md-6 p-5 mt-lg-5 text-center text-md-start">
-                <h1 class="text-dark fw-bold display-5 mb-4 animated fadeIn">Blogs</h1>
-                <nav aria-label="breadcrumb" class="animated fadeIn">
-                    <ol class="breadcrumb text-uppercase text-muted">
-                        <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-dark">Home</a></li>
-                        <li class="breadcrumb-item active text-dark " aria-current="page"><u>Blogs</u></li>
-                    </ol>
-                </nav>
+            <div class="row g-0 align-items-center flex-column-reverse flex-md-row bg-gradient-to-r">
+                <div class="col-md-6 p-5 mt-lg-5 text-center text-md-start">
+                    <h1 class="text-dark fw-bold display-5 mb-4 animated fadeIn">Blogs</h1>
+                    <nav aria-label="breadcrumb" class="animated fadeIn">
+                        <ol class="breadcrumb text-uppercase text-muted">
+                            <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-dark">Home</a></li>
+                            <li class="breadcrumb-item active text-dark " aria-current="page"><u>Blogs</u></li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Header End -->
-    <!-- Blog Content -->
-    <!-- <div class="container py-5">
+        <!-- Header End -->
+        
+        <!-- <div class="container py-5">
         <div class="text-center mb-5">
             <h2 class="fw-bold"> Blog Posts</h2>
             <p class="text-muted">Stay updated with insights, trends, and expert opinions from Seacon Properties.
@@ -154,7 +152,7 @@
         </div>
         <div class="row">
             <!-- Blog Post 1 -->
-    <!-- <div class="col-md-6 col-lg-4 mb-4">
+        <!-- <div class="col-md-6 col-lg-4 mb-4">
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -185,8 +183,8 @@
                 </div>
             </div> -->
 
-    <!-- Blog Post 2 -->
-    <!-- <div class="col-md-6 col-lg-4 mb-4">
+        <!-- Blog Post 2 -->
+        <!-- <div class="col-md-6 col-lg-4 mb-4">
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -216,8 +214,8 @@
                 </div>
             </div> -->
 
-    <!-- Blog Post 3 -->
-    <!-- <div class="col-md-6 col-lg-4 mb-4">
+        <!-- Blog Post 3 -->
+        <!-- <div class="col-md-6 col-lg-4 mb-4">
                 <div class="flip-card">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
@@ -249,8 +247,8 @@
         </div>
     </div> -->
 
-    <!-- CSS for Flip Effect -->
-    <!-- <style>
+        <!-- CSS for Flip Effect -->
+        <!-- <style>
         /* Flip Card Styles */
         .flip-card {
             perspective: 1500px;
@@ -321,10 +319,10 @@
         .btn-dark:hover {
             background-color: #333;
         } -->
-    <!-- </style> -->
+        <!-- </style> -->
 
-    <!-- JavaScript for Button Click Flip -->
-    <!-- <script>
+        <!-- JavaScript for Button Click Flip -->
+        <!-- <script>
         document.querySelectorAll(".flip-btn").forEach(button => {
             button.addEventListener("click", function () {
                 let card = this.closest(".flip-card");
@@ -332,318 +330,336 @@
             });
         });
     </script> -->
-    <section class="blog-section container-xxl bg-light">
-        <div class="blog-container mx-auto px-6 sm:px-8 lg:px-12">
-            <style>
-                .responsive-image-container {
-                    max-width: 100%;
-                    display: block;
-                    height: auto;
-                    margin-bottom: 30px;
-                    margin-top: 30px;
-                    text-align: center;
-                }
-
-                .responsive-image-1,
-                .responsive-image-2,
-                .responsive-image-3,
-                .responsive-image-4 {
-                    max-width: 75%;
-                    /* Ensures images look better and are more visible */
-                    height: auto;
-                    border-radius: 1rem;
-                    margin: 0 auto;
-                }
-
-                .blog-heading {
-                    font-size: 2rem;
-                    font-weight: bold;
-                    color: #2c3e50;
-                    text-align: center;
-                    margin-bottom: 20px;
-                }
-
-                .blog-container p,
-                .blog-container h2 {
-                    font-size: 1.125rem;
-                    line-height: 1.8;
-                    color: #34495e;
-                    margin-bottom: 20px;
-                    text-align: justify;
-                }
-
-                .blog-container a {
-                    color: #1a73e8;
-                    text-decoration: none;
-                }
-
-                .blog-container a:hover {
-                    text-decoration: underline;
-                }
-
-                .blog-container h2 {
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    color: #34495e;
-                    text-align: center;
-                }
-
-                /* Added margins to the left and right of text blocks */
-                .blog-container p,
-                .blog-container h2 {
-                    padding-left: 20px;
-                    padding-right: 20px;
-                }
-
-                @media (max-width: 768px) {
+        <section class="blog-section container-xxl bg-light">
+            <div class="blog-container mx-auto px-6 sm:px-8 lg:px-12">
+                <style>
                     .responsive-image-container {
+                        max-width: 100%;
+                        display: block;
+                        height: auto;
                         margin-bottom: 30px;
                         margin-top: 30px;
+                        text-align: center;
+                    }
+
+                    .responsive-image-1,
+                    .responsive-image-2,
+                    .responsive-image-3,
+                    .responsive-image-4 {
+                        max-width: 75%;
+                        /* Ensures images look better and are more visible */
+                        height: auto;
+                        border-radius: 1rem;
+                        margin: 0 auto;
                     }
 
                     .blog-heading {
-                        font-size: 1.75rem;
+                        font-size: 2rem;
+                        font-weight: bold;
+                        color: #2c3e50;
+                        text-align: center;
+                        margin-bottom: 20px;
                     }
 
                     .blog-container p,
                     .blog-container h2 {
-                        font-size: 1rem;
-                        padding-left: 10px;
-                        padding-right: 10px;
+                        font-size: 1.125rem;
+                        line-height: 1.8;
+                        color: #34495e;
+                        margin-bottom: 20px;
+                        text-align: justify;
                     }
-                }
-            </style>
 
-            <!-- BLOG 1 start -->
+                    .blog-container a {
+                        color: #1a73e8;
+                        text-decoration: none;
+                    }
 
-            <!-- Image 1 -->
-            <div class="responsive-image-container">
-                <h1 class="blog-heading">Unlocking Premium Properties: Expert Insights from Seacon Properties</h1>
-            </div>
+                    .blog-container a:hover {
+                        text-decoration: underline;
+                    }
 
-            <p>At <b>Seacon Properties</b>, we specialize in providing <b>innovative real estate solutions</b> that
-                blend luxury, functionality, and sustainability. As a trusted name in <b>real estate development in
-                    Hubballi</b>, we understand the unique needs of our clients, whether they are looking for <b>premium
-                    residential properties</b> or lucrative investment opportunities in high-end real estate. Our
-                properties are designed to elevate your living or business experience, offering unmatched quality and
-                attention to detail.</p>
+                    .blog-container h2 {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        color: #34495e;
+                        text-align: center;
+                    }
 
-            <h2><u>Unique Properties for Every Need</u></h2>
-            <p>Whether you're looking for a <b>luxury apartment</b> in the heart of Hubballi or a commercial real estate
-                property for your growing business, <b>Seacon Properties</b> offers a diverse range of properties to
-                cater to your specific needs. Our <b>commercial spaces</b> are strategically located to ensure high foot
-                traffic, making them ideal for businesses aiming to grow and expand. Our <b>residential properties</b>,
-                on the other hand, combine comfort and luxury, providing the perfect sanctuary for your family.</p>
+                    /* Added margins to the left and right of text blocks */
+                    .blog-container p,
+                    .blog-container h2 {
+                        padding-left: 20px;
+                        padding-right: 20px;
+                    }
 
-            <!-- Image 2 -->
-            <div class="responsive-image-container">
-                <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvcGVydGllc3xlbnwwfHwwfHx8MA%3D%3D"
-                    alt="Luxury Real Estate" class="responsive-image-2">
-            </div>
+                    @media (max-width: 768px) {
+                        .responsive-image-container {
+                            margin-bottom: 30px;
+                            margin-top: 30px;
+                        }
 
-            <h2>Expertise in Real Estate Development</h2>
-            <p>With years of experience in the real estate industry, we are proud to be recognized as one of the top
-                real estate developers in Hubballi. Our projects stand out for their use of high-quality materials,
-                modern design, and sustainable building practices. Whether you're interested in <b>residential property
-                    development</b> or large-scale commercial projects, we have the expertise to deliver exceptional
-                results that surpass your expectations.</p>
+                        .blog-heading {
+                            font-size: 1.75rem;
+                        }
 
-            <h2><u>Tailored to Your Investment Goals</u></h2>
-            <p>At <b>Seacon Properties</b>, we are committed to helping you achieve your real estate investment goals.
-                Our team works closely with you, whether you're looking for <b>investment opportunities in
-                    Hubballi</b>'s real estate market or seeking <b>luxury homes</b> that promise long-term value. We
-                offer tailored solutions that reflect your vision and financial goals, ensuring each property aligns
-                with your investment strategy.</p>
+                        .blog-container p,
+                        .blog-container h2 {
+                            font-size: 1rem;
+                            padding-left: 10px;
+                            padding-right: 10px;
+                        }
+                    }
+                </style>
 
-            <h2>Perfect for Every Type of Investor</h2>
-            <p>At <b>Seacon Properties</b>, we offer more than just properties – we offer investment opportunities that
-                deliver strong returns. Whether you're an individual looking for your dream home or a business seeking a
-                strategic location, our real estate solutions are designed to meet your needs. Our <b>bespoke commercial
-                    properties</b> are tailored to suit the needs of businesses in various industries, from retail to
-                hospitality.</p>
-            <p>From <b>luxury residences in Hubballi</b> to <b>office spaces for startups</b>, we are committed to
-                providing properties that offer both functionality and aesthetic appeal. Our attention to detail ensures
-                that each project we undertake meets the highest standards of quality and design.</p>
+                <!-- BLOG 1 start -->
 
-            <!-- Image 3 -->
-            <div class="responsive-image-container">
-                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGludmVzdG1lbnR8ZW58MHx8MHx8fDA%3D"
-                    alt="Seacon Properties Development" class="responsive-image-3">
-            </div>
-
-            <h2><u>Why Choose Seacon Properties?</u></h2>
-
-            <p>Choosing <b>Seacon Properties</b> means investing in a real estate company that understands your needs.
-                We focus on delivering <b>premium real estate solutions in Hubballi</b> that are both beautiful and
-                functional. Our commitment to excellence ensures that every project we undertake adds significant value
-                to the real estate market and is built to last.</p>
-            <p>Whether you’re buying a <b>luxury apartment</b>, a <b>commercial property</b>, or seeking investment
-                opportunities, <b>Seacon Properties</b> offers unparalleled expertise and a proven track record in
-                delivering projects that exceed expectations.</p>
-
-            <!-- Image 4 -->
-            <div class="responsive-image-container">
-                <img src="https://images.unsplash.com/flagged/photo-1564767609342-620cb19b2357?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
-                    alt="Real Estate Investment" class="responsive-image-4">
-            </div>
-
-            <h2><u>Your Next Investment Awaits</u></h2>
-            <p>At <b>Seacon Properties</b>, we are more than just real estate developers – we are creators of value.
-                Whether you are looking for <b>luxury homes</b>, <b>commercial properties</b>, or <b>investment
-                    opportunities</b> in Hubballi, our team is here to guide you through every step of the process. From
-                finding the right property to securing the best deal, we are committed to making your real estate
-                journey smooth and successful.</p>
-            <p>If you're ready to explore the best real estate options in Hubballi, reach out to <b>Seacon
-                    Properties</b> today. <br>Let us help you find the perfect property that matches your needs and
-                aspirations.</p>
-
-            <!-- BLOG 1 end -->
-
-        </div>
-    </section>
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white pt-5 mt-5">
-        <div class="container">
-            <!-- Footer Top Section -->
-            <div
-                class="d-flex flex-column flex-md-row justify-content-between align-items-start pb-4 border-bottom border-secondary">
-                <!-- Footer Logo (Left) -->
-                <div class="footer-logo mb-4 mb-md-0 w-full sm:w-1/4">
-                    <img src="img/logo-bg.png" alt="Seacon Properties Logo" class="img-fluid" style="max-width: 200px;">
+                <!-- Image 1 -->
+                <div class="responsive-image-container">
+                    <h1 class="blog-heading">Unlocking Premium Properties: Expert Insights from Seacon Properties</h1>
                 </div>
 
-                <!-- Footer Links & Contact Section (Right Aligned) -->
-                <div class="d-flex flex-column flex-md-row gap-5 text-md-end w-full sm:w-3/4">
-                    <!-- Quick Links -->
-                    <div class="mb-4 mb-md-0 w-full sm:w-1/4">
-                        <h5 class="text-white mb-3">Quick Links</h5>
-                        <ul class="list-unstyled">
-                            <li><a class="text-white-50 text-decoration-none" href="about.html">About Us</a></li>
-                            <li><a class="text-white-50 text-decoration-none" href="blogs.html">Blog</a></li>
-                            <li><a class="text-white-50 text-decoration-none" href="project.html">Our Projects</a>
-                            </li>
-                            <li><a class="text-white-50 text-decoration-none" href="contact.html">Contact Us</a>
-                            </li>
-                        </ul>
+                <p>At <b>Seacon Properties</b>, we specialize in providing <b>innovative real estate solutions</b> that
+                    blend luxury, functionality, and sustainability. As a trusted name in <b>real estate development in
+                        Hubballi</b>, we understand the unique needs of our clients, whether they are looking for
+                    <b>premium
+                        residential properties</b> or lucrative investment opportunities in high-end real estate. Our
+                    properties are designed to elevate your living or business experience, offering unmatched quality
+                    and
+                    attention to detail.
+                </p>
+
+                <h2><u>Unique Properties for Every Need</u></h2>
+                <p>Whether you're looking for a <b>luxury apartment</b> in the heart of Hubballi or a commercial real
+                    estate
+                    property for your growing business, <b>Seacon Properties</b> offers a diverse range of properties to
+                    cater to your specific needs. Our <b>commercial spaces</b> are strategically located to ensure high
+                    foot
+                    traffic, making them ideal for businesses aiming to grow and expand. Our <b>residential
+                        properties</b>,
+                    on the other hand, combine comfort and luxury, providing the perfect sanctuary for your family.</p>
+
+                <!-- Image 2 -->
+                <div class="responsive-image-container">
+                    <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvcGVydGllc3xlbnwwfHwwfHx8MA%3D%3D"
+                        alt="Luxury Real Estate" class="responsive-image-2">
+                </div>
+
+                <h2>Expertise in Real Estate Development</h2>
+                <p>With years of experience in the real estate industry, we are proud to be recognized as one of the top
+                    real estate developers in Hubballi. Our projects stand out for their use of high-quality materials,
+                    modern design, and sustainable building practices. Whether you're interested in <b>residential
+                        property
+                        development</b> or large-scale commercial projects, we have the expertise to deliver exceptional
+                    results that surpass your expectations.</p>
+
+                <h2><u>Tailored to Your Investment Goals</u></h2>
+                <p>At <b>Seacon Properties</b>, we are committed to helping you achieve your real estate investment
+                    goals.
+                    Our team works closely with you, whether you're looking for <b>investment opportunities in
+                        Hubballi</b>'s real estate market or seeking <b>luxury homes</b> that promise long-term value.
+                    We
+                    offer tailored solutions that reflect your vision and financial goals, ensuring each property aligns
+                    with your investment strategy.</p>
+
+                <h2>Perfect for Every Type of Investor</h2>
+                <p>At <b>Seacon Properties</b>, we offer more than just properties – we offer investment opportunities
+                    that
+                    deliver strong returns. Whether you're an individual looking for your dream home or a business
+                    seeking a
+                    strategic location, our real estate solutions are designed to meet your needs. Our <b>bespoke
+                        commercial
+                        properties</b> are tailored to suit the needs of businesses in various industries, from retail
+                    to
+                    hospitality.</p>
+                <p>From <b>luxury residences in Hubballi</b> to <b>office spaces for startups</b>, we are committed to
+                    providing properties that offer both functionality and aesthetic appeal. Our attention to detail
+                    ensures
+                    that each project we undertake meets the highest standards of quality and design.</p>
+
+                <!-- Image 3 -->
+                <div class="responsive-image-container">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGludmVzdG1lbnR8ZW58MHx8MHx8fDA%3D"
+                        alt="Seacon Properties Development" class="responsive-image-3">
+                </div>
+
+                <h2><u>Why Choose Seacon Properties?</u></h2>
+
+                <p>Choosing <b>Seacon Properties</b> means investing in a real estate company that understands your
+                    needs.
+                    We focus on delivering <b>premium real estate solutions in Hubballi</b> that are both beautiful and
+                    functional. Our commitment to excellence ensures that every project we undertake adds significant
+                    value
+                    to the real estate market and is built to last.</p>
+                <p>Whether you’re buying a <b>luxury apartment</b>, a <b>commercial property</b>, or seeking investment
+                    opportunities, <b>Seacon Properties</b> offers unparalleled expertise and a proven track record in
+                    delivering projects that exceed expectations.</p>
+
+                <!-- Image 4 -->
+                <div class="responsive-image-container">
+                    <img src="https://images.unsplash.com/flagged/photo-1564767609342-620cb19b2357?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="Real Estate Investment" class="responsive-image-4">
+                </div>
+
+                <h2><u>Your Next Investment Awaits</u></h2>
+                <p>At <b>Seacon Properties</b>, we are more than just real estate developers – we are creators of value.
+                    Whether you are looking for <b>luxury homes</b>, <b>commercial properties</b>, or <b>investment
+                        opportunities</b> in Hubballi, our team is here to guide you through every step of the process.
+                    From
+                    finding the right property to securing the best deal, we are committed to making your real estate
+                    journey smooth and successful.</p>
+                <p>If you're ready to explore the best real estate options in Hubballi, reach out to <b>Seacon
+                        Properties</b> today. <br>Let us help you find the perfect property that matches your needs and
+                    aspirations.</p>
+
+                <!-- BLOG 1 end -->
+
+            </div>
+        </section>
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-white pt-5 mt-5">
+            <div class="container">
+                <!-- Footer Top Section -->
+                <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-start pb-4 border-bottom border-secondary">
+                    <!-- Footer Logo (Left) -->
+                    <div class="footer-logo mb-4 mb-md-0 w-full sm:w-1/4">
+                        <img src="img/logo-bg.png" alt="Seacon Properties Logo" class="img-fluid"
+                            style="max-width: 200px;">
                     </div>
 
-                    <!-- Get In Touch Section -->
-                    <div class="footer-center w-full sm:w-1/4 mb-4 mb-md-0">
-                        <h5 class="text-white text-lg mb-4">Get In Touch</h5>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> Hubbali</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9902063673 - Er Noor Ahmed</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9886094339 - Er Javed Akbar</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-2"></i> info@example.com</p>
+                    <!-- Footer Links & Contact Section (Right Aligned) -->
+                    <div class="d-flex flex-column flex-md-row gap-5 text-md-end w-full sm:w-3/4">
+                        <!-- Quick Links -->
+                        <div class="mb-4 mb-md-0 w-full sm:w-1/4">
+                            <h5 class="text-white mb-3">Quick Links</h5>
+                            <ul class="list-unstyled">
+                                <li><a class="text-white-50 text-decoration-none" href="about.html">About Us</a></li>
+                                <li><a class="text-white-50 text-decoration-none" href="blogs.html">Blog</a></li>
+                                <li><a class="text-white-50 text-decoration-none" href="project.html">Our Projects</a>
+                                </li>
+                                <li><a class="text-white-50 text-decoration-none" href="contact.html">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
 
-                        <!-- Social Media Icons -->
-                        <div class="footer-center w-full sm:w-1/4 mb-4 mb-md-0 ">
-                            <a class="btn" href="#" aria-label="Facebook"><i
-                                    class="fab fa-facebook-f text-primary hover:text-blue-600"></i></a>
-                            <a class="btn" href="#" aria-label="Instagram"><i
-                                    class="fab fa-instagram text-primary hover:text-pink-500"></i></a>
-                            <a class="btn" href="#" aria-label="LinkedIn"><i
-                                    class="fab fa-linkedin text-primary hover:text-blue-700"></i></a>
+                        <!-- Get In Touch Section -->
+                        <div class="footer-center w-full sm:w-1/4 mb-4 mb-md-0">
+                            <h5 class="text-white text-lg mb-4">Get In Touch</h5>
+                            <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> Hubbali</p>
+                            <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9902063673 - Er Noor Ahmed</p>
+                            <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9886094339 - Er Javed Akbar</p>
+                            <p class="mb-2"><i class="fa fa-envelope me-2"></i> info@example.com</p>
+
+                            <!-- Social Media Icons -->
+                            <div class="footer-center w-full sm:w-1/4 mb-4 mb-md-0 ">
+                                <a class="btn" href="#" aria-label="Facebook"><i
+                                        class="fab fa-facebook-f text-primary hover:text-blue-600"></i></a>
+                                <a class="btn" href="#" aria-label="Instagram"><i
+                                        class="fab fa-instagram text-primary hover:text-pink-500"></i></a>
+                                <a class="btn" href="#" aria-label="LinkedIn"><i
+                                        class="fab fa-linkedin text-primary hover:text-blue-700"></i></a>
+                            </div>
+                        </div>
+                        <!-- Newsletter Signup Section -->
+                        <div class="footer-right w-full sm:w-1/4">
+                            <h5 class="text-white text-lg mb-4">Sign Up </h5>
+                            <p class="text-white mb-6">Stay updated with the latest news, offers, & exclusive deals
+                                from<br>Seacon Properties.</p>
+
+                            <!-- Newsletter Signup Form -->
+                            <form action="/subscribe" method="POST" class="max-w-md mx-auto">
+                                <input type="email" name="email" placeholder="Enter your email" required
+                                    class="px-4 py-2 border border-gray-300 rounded-md w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                <button type="submit"
+                                    class="bg-blue-500 text-dark px-6 py-2 rounded-md w-full hover:bg-blue-600 transition duration-300">Subscribe</button>
+                            </form>
                         </div>
                     </div>
-                    <!-- Newsletter Signup Section -->
-                    <div class="footer-right w-full sm:w-1/4">
-                        <h5 class="text-white text-lg mb-4">Sign Up </h5>
-                        <p class="text-white mb-6">Stay updated with the latest news, offers, & exclusive deals
-                            from<br>Seacon Properties.</p>
+                </div>
 
-                        <!-- Newsletter Signup Form -->
-                        <form action="/subscribe" method="POST" class="max-w-md mx-auto">
-                            <input type="email" name="email" placeholder="Enter your email" required
-                                class="px-4 py-2 border border-gray-300 rounded-md w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                            <button type="submit"
-                                class="bg-blue-500 text-dark px-6 py-2 rounded-md w-full hover:bg-blue-600 transition duration-300">Subscribe</button>
-                        </form>
+                <!-- Copyright Section -->
+                <div class="container pt-3">
+                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+                        <p class="mb-2 mb-md-0">&copy; <a class="text-white-50" href="#">Seacon Properties</a>, All
+                            Rights Reserved.</p>
+                        <p class="mb-0">Designed By <a class="text-white-50" href="https://aspironkhuze.com/">Aspiron
+                                Khuze Technologies Pvt Ltd</a></p>
                     </div>
                 </div>
             </div>
-
-            <!-- Copyright Section -->
-            <div class="container pt-3">
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
-                    <p class="mb-2 mb-md-0">&copy; <a class="text-white-50" href="#">Seacon Properties</a>, All
-                        Rights Reserved.</p>
-                    <p class="mb-0">Designed By <a class="text-white-50" href="https://aspironkhuze.com/">Aspiron
-                            Khuze Technologies Pvt Ltd</a></p>
-                </div>
-            </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary text-dark back-to-top" id="backToTop">
-        <i class="fa fa-angle-double-up"></i>
-    </a>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary text-dark back-to-top" id="backToTop">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
 
-    <!-- WhatsApp -->
-    <a href="https://r.search.yahoo.com/_ylt=AwrPri3KVZ5nwJcHf5S7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1739639498/RO=10/RU=https%3a%2f%2fweb.whatsapp.com%2f/RK=2/RS=9AVThN7TL7qEmFURA9Hrs3TMmqE-"
-        class="btn btn-lg btn-success whatsapp-button">
-        <i class="fab fa-whatsapp" style="color: white;"></i>
-    </a>
+        <!-- WhatsApp -->
+        <a href="https://r.search.yahoo.com/_ylt=AwrPri3KVZ5nwJcHf5S7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1739639498/RO=10/RU=https%3a%2f%2fweb.whatsapp.com%2f/RK=2/RS=9AVThN7TL7qEmFURA9Hrs3TMmqE-"
+            class="btn btn-lg btn-success whatsapp-button">
+            <i class="fab fa-whatsapp" style="color: white;"></i>
+        </a>
 
-    <style>
-        /* Style for the Back to Top button (Square) */
-        .back-to-top {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            z-index: 1000;
-            width: 50px;
-            height: 50px;
-            display: none;
-            /* Hidden by default */
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Style for the WhatsApp button (Circular) */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            background-color: rgb(16, 185, 19);
-        }
-    </style>
-
-    <script>
-        // Show the "Back to Top" button only when scrolled down
-        const backToTopButton = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) { // Show when scrolled down 100px
-                backToTopButton.style.display = 'flex';
-            } else {
-                backToTopButton.style.display = 'none';
+        <style>
+            /* Style for the Back to Top button (Square) */
+            .back-to-top {
+                position: fixed;
+                bottom: 80px;
+                right: 20px;
+                z-index: 1000;
+                width: 50px;
+                height: 50px;
+                display: none;
+                /* Hidden by default */
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
-        });
-    </script>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+            /* Style for the WhatsApp button (Circular) */
+            .whatsapp-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                background-color: rgb(16, 185, 19);
+            }
+        </style>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        <script>
+            // Show the "Back to Top" button only when scrolled down
+            const backToTopButton = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) { // Show when scrolled down 100px
+                    backToTopButton.style.display = 'flex';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+        </script>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
 </body>
 
 </html>
