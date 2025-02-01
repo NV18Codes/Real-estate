@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<>
+<head>
     <meta charset="utf-8">
     <title>Seacon Properties - We are building something amazing!</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -30,319 +30,422 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+</head>
 
-        .blog-card {
-            transition: 0.3s ease-in-out;
-        }
+<body>
+    <div class="container-xxl bg-dark p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
 
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-    </head>
-
-    <body>
 
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
+        <div class="container-fluid bg-dark sticky-top ">
+            <nav class="navbar navbar-expand-lg navbar-dark">
                 <a href="index.html" class="navbar-brand d-flex align-items-center">
-                    <img src="img/logo-bg.png" alt="Logo" class="ms-2" height="60">
-                    <h1 class="text-primary mb-0 fs-5 fw-bold ms-2" style="color:#b7937d;">Seacon<span
-                            class="fw-normal">-Properties</span></h1>
+                    <img src="img\logo-bg-1.png" alt="Logo" class="ms-2 img-fluid"
+                        style="max-height: 120px; object-fit: contain;" width="100%">
+                    <h5 class="text-primary mb-0 fs-4 fw-normal ms-3" style="color:#b7937d; font-size: 1.25rem;">
+                        Seacon Properties
+                    </h5>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="fa fa-bars text-light"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="project.html" class="nav-link">Our Projects</a></li>
+                        <li class="nav-item"><a href="index.html" class="nav-link ">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
+                        <a href="service.html" class="nav-item nav-link "> Services</a>
+                        <a href="project.html" class="nav-item nav-link "> Projects</a>
                         <li class="nav-item"><a href="blogs.html" class="nav-link active">Blogs</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-        <!-- Navbar End -->
-
-        <!-- Header Start -->
-        <div class="container-fluid header bg-white p-0 mt-5">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 p-5 mt-lg-5 text-center text-md-start">
-                    <h1 class="text-primary fw-bold display-5 mb-4 animated fadeIn">Blogs</h1>
-                    <nav aria-label="breadcrumb" class="animated fadeIn">
-                        <ol class="breadcrumb text-uppercase text-muted">
-                            <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
-                            <li class="breadcrumb-item active " aria-current="page">Blogs</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+            </nav>
         </div>
-        <!-- Header End -->
+    </div>
+    <!-- Navbar End -->
 
-
-        <!-- Blog Content -->
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold"> Blog Posts</h2>
-                <p class="text-muted">Stay updated with insights, trends, and expert opinions from Seacon Properties.
-                </p>
-            </div>
-            <div class="row">
-                <!-- Blog Post 1 -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg"
-                                    class="card-img-top" alt="Market Analysis">
-                                <div class="card-body">
-                                    <h5 class="card-title">Market Analysis</h5>
-                                    <p class="card-text text-dark">An in-depth analysis of current market trends,
-                                        demands, and
-                                        investment opportunities in real estate.</p>
-                                    <button class="btn btn-primary flip-btn">Read More</button>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="card-body">
-                                    <h5 class="card-title">Market Analysis Insights</h5>
-                                    <p class="card-text text-dark">
-                                        The real estate sector has seen a rise in sustainable housing, smart homes, and
-                                        joint development ventures. Market trends indicate a shift toward eco-friendly
-                                        living spaces, making this a key area for investment.
-                                        <b>Seacon Properties</b> strategically positions itself to capitalize on these
-                                        evolving opportunities.
-                                    </p>
-                                    <button class="btn btn-dark flip-btn">Go Back</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Blog Post 2 -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="https://cdn.pixabay.com/photo/2019/03/30/19/31/hands-4091879_1280.jpg"
-                                    class="card-img-top" alt="Sustainability">
-                                <div class="card-body">
-                                    <h5 class="card-title">The Importance of Sustainability</h5>
-                                    <p class="card-text text-dark">How Seacon Properties integrates eco-friendly
-                                        practices in its
-                                        real estate projects, creating a sustainable future.</p>
-                                    <button class="btn btn-primary flip-btn">Read More</button>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="card-body">
-                                    <h5 class="card-title">Sustainability in Real Estate</h5>
-                                    <p class="card-text text-dark">
-                                        Seacon Properties is committed to sustainable development by reducing
-                                        environmental impact, enhancing energy efficiency, and implementing green
-                                        technologies. These efforts are designed to build a greener future while
-                                        preserving the planet.
-                                    </p>
-                                    <button class="btn btn-dark flip-btn">Go Back</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Blog Post 3 -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <img src="https://cdn.pixabay.com/photo/2017/06/27/11/48/team-spirit-2447163_1280.jpg"
-                                    class="card-img-top" alt="Driving Values">
-                                <div class="card-body">
-                                    <h5 class="card-title">Driving Values</h5>
-                                    <p class="card-text text-dark">Our core values—excellence, inclusivity, and
-                                        adaptability—form
-                                        the foundation of our commitment to innovation and sustainable growth.</p>
-                                    <button class="btn btn-primary flip-btn">Read More</button>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="card-body">
-                                    <h5 class="card-title">Our Commitment</h5>
-                                    <p class="card-text text-dark">
-                                        We strive for <b>excellence</b> from concept to execution, embrace
-                                        <b>inclusivity</b> by designing for diverse lifestyles, and ensure
-                                        <b>adaptability</b> in a dynamic market. Our vision prioritizes sustainability
-                                        and quality, delivering exceptional spaces for the future.
-                                    </p>
-                                    <button class="btn btn-dark flip-btn">Go Back</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- CSS for Flip Effect -->
+    <!-- Header Start -->
+    <div class="container-fluid header bg-white p-0 mt-5" id="new-header">
         <style>
-            /* Flip Card Styles */
-            .flip-card {
-                perspective: 1500px;
-                width: 100%;
-                height: 100%;
+            .bg-gradient-to-r {
+                background-image: linear-gradient(to right, #c4cbd3, #b7937d);
+                /* Ensure the gradient is vibrant yet elegant */
             }
 
-            .flip-card-inner {
-                position: relative;
-                width: 100%;
-                height: 400px;
-                transform-style: preserve-3d;
-                transition: transform 0.7s ease-in-out;
+            /* Adjust header text size on different screen sizes */
+            @media (max-width: 767px) {
+                #new-header h1 {
+                    font-size: 2.5rem;
+                    /* Smaller size for smaller screens */
+                }
             }
 
-            .flip-card-front,
-            .flip-card-back {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-                border-radius: 12px;
-                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-                background: rgba(255, 255, 255, 0.2);
-                backdrop-filter: blur(10px);
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
+            @media (min-width: 768px) {
+                #new-header h1 {
+                    font-size: 4rem;
+                    /* Larger size for larger screens */
+                }
             }
 
-            .flip-card-front {
-                z-index: 2;
+            /* Animation for breadcrumb */
+            .breadcrumb {
+                animation: fadeIn 1.5s ease-in-out;
             }
 
-            .flip-card-back {
-                transform: rotateY(180deg);
-                background: #f8f9fa;
+            /* Subtle fadeIn animation */
+            @keyframes fadeIn {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 1;
+                }
             }
 
-            .flip-card.flip-active .flip-card-inner {
-                transform: rotateY(180deg);
-            }
-
-            /* Image Styling */
-            .card-img-top {
-                border-top-left-radius: 12px;
-                border-top-right-radius: 12px;
-                height: 180px;
-                object-fit: cover;
-            }
-
-            /* Button Enhancements */
-            .flip-btn {
-                margin-top: 10px;
-                border-radius: 25px;
+            /* Header Text Styling */
+            #new-header h1 {
+                font-size: 3.5rem;
                 font-weight: bold;
-                transition: all 0.3s ease;
+                color: #001F3F;
+                /* Deep contrasting color */
             }
 
-            .flip-btn:hover {
-                transform: scale(1.05);
-                box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3);
-            }
-
-            .btn-dark:hover {
-                background-color: #333;
+            /* Adjust breadcrumb style */
+            .breadcrumb {
+                font-size: 1rem;
             }
         </style>
 
-        <!-- JavaScript for Button Click Flip -->
-        <script>
-            document.querySelectorAll(".flip-btn").forEach(button => {
-                button.addEventListener("click", function () {
-                    let card = this.closest(".flip-card");
-                    card.classList.toggle("flip-active");
-                });
-            });
-        </script>
+        <div class="row g-0 align-items-center flex-column-reverse flex-md-row bg-gradient-to-r">
+            <div class="col-md-6 p-5 mt-lg-5 text-center text-md-start">
+                <h1 class="text-dark fw-bold display-5 mb-4 animated fadeIn">Blogs</h1>
+                <nav aria-label="breadcrumb" class="animated fadeIn">
+                    <ol class="breadcrumb text-uppercase text-muted">
+                        <li class="breadcrumb-item"><a href="#" class="text-decoration-none text-dark">Home</a></li>
+                        <li class="breadcrumb-item active text-dark " aria-current="page"><u>Blogs</u></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+    <!-- Header End -->
 
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
-            <div class="container">
-                <!-- Footer Top Section -->
-                <div
-                    class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-4 border-bottom border-secondary">
-                    <!-- Footer Logo (Left) -->
-                    <div class="footer-logo">
-                        <img src="img/logo-bg.png" alt="Seacon Properties Logo" class="img-fluid"
-                            style="max-width: 200px;">
-                    </div>
-
-                    <!-- Footer Links & Contact Section (Right Aligned) -->
-                    <div class="d-flex flex-column flex-md-row gap-5 text-md-end">
-                        <!-- Quick Links -->
-                        <div>
-                            <h5 class="text-white mb-3">Quick Links</h5>
-                            <ul class="list-unstyled">
-                                <li><a class="text-white-50 text-decoration-none" href="about.html">About Us</a></li>
-                                <li><a class="text-white-50 text-decoration-none" href="blogs.html">Blog</a></li>
-                                <li><a class="text-white-50 text-decoration-none" href="project.html">Our Projects</a>
-                                </li>
-                                <li><a class="text-white-50 text-decoration-none" href="contact.html">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Get In Touch -->
-                        <div>
-                            <h5 class="text-white mb-3">Get In Touch</h5>
-                            <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> Hubli</p>
-                            <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9902063673 - Er Noor Ahmed</p>
-                            <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9886094339 - Er Javed Akbar</p>
-                            <p class="mb-2"><i class="fa fa-envelope me-2"></i> info@example.com</p>
-
-                            <!-- Social Media Icons -->
-                            <div class="d-flex justify-content-end gap-3 pt-2">
-                                <a class="btn p-2" href="#" role="button">
-                                    <i class="fab fa-twitter text-primary"></i>
-                                </a>
-                                <a class="btn" href="#"><i class="fab fa-facebook-f text-primary"></i></a>
-                                <a class="btn" href="#"><i class="fab fa-youtube text-primary"></i></a>
+    <!-- Blog Content -->
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold"> Blog Posts</h2>
+            <p class="text-muted">Stay updated with insights, trends, and expert opinions from Seacon Properties.
+            </p>
+        </div>
+        <div class="row">
+            <!-- Blog Post 1 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg"
+                                class="card-img-top" alt="Market Analysis">
+                            <div class="card-body">
+                                <h5 class="card-title">Market Analysis</h5>
+                                <p class="card-text text-dark">An in-depth analysis of current market trends,
+                                    demands, and
+                                    investment opportunities in real estate.</p>
+                                <button class="btn btn-primary flip-btn">Read More</button>
                             </div>
                         </div>
-
-                        <!-- Copyright Section -->
-
+                        <div class="flip-card-back">
+                            <div class="card-body">
+                                <h5 class="card-title">Market Analysis Insights</h5>
+                                <p class="card-text text-dark">
+                                    The real estate sector has seen a rise in sustainable housing, smart homes, and
+                                    joint development ventures. Market trends indicate a shift toward eco-friendly
+                                    living spaces, making this a key area for investment.
+                                    <b>Seacon Properties</b> strategically positions itself to capitalize on these
+                                    evolving opportunities.
+                                </p>
+                                <button class="btn btn-dark flip-btn">Go Back</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="container pt-3">
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
-                    <p class="mb-2 mb-md-0">&copy; <a class="text-white-50" href="#">Seacon Properties</a>,
-                        All Rights
-                        Reserved.</p>
-                    <p class="mb-0">Designed By <a class="text-white-50" href="https://aspironkhuze.com/">Aspiron Khuze
-                            Technologies Pvt Ltd</a></p>
+
+            <!-- Blog Post 2 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://cdn.pixabay.com/photo/2019/03/30/19/31/hands-4091879_1280.jpg"
+                                class="card-img-top" alt="Sustainability">
+                            <div class="card-body">
+                                <h5 class="card-title">The Importance of Sustainability</h5>
+                                <p class="card-text text-dark">How Seacon Properties integrates eco-friendly
+                                    practices in its
+                                    real estate projects, creating a sustainable future.</p>
+                                <button class="btn btn-primary flip-btn">Read More</button>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-body">
+                                <h5 class="card-title">Sustainability in Real Estate</h5>
+                                <p class="card-text text-dark">
+                                    Seacon Properties is committed to sustainable development by reducing
+                                    environmental impact, enhancing energy efficiency, and implementing green
+                                    technologies. These efforts are designed to build a greener future while
+                                    preserving the planet.
+                                </p>
+                                <button class="btn btn-dark flip-btn">Go Back</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Footer End -->
 
-
-            <!-- Back to Top -->
-            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+            <!-- Blog Post 3 -->
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://cdn.pixabay.com/photo/2017/06/27/11/48/team-spirit-2447163_1280.jpg"
+                                class="card-img-top" alt="Driving Values">
+                            <div class="card-body">
+                                <h5 class="card-title">Driving Values</h5>
+                                <p class="card-text text-dark">Our core values—excellence, inclusivity, and
+                                    adaptability—form
+                                    the foundation of our commitment to innovation and sustainable growth.</p>
+                                <button class="btn btn-primary flip-btn">Read More</button>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-body">
+                                <h5 class="card-title">Our Commitment</h5>
+                                <p class="card-text text-dark">
+                                    We strive for <b>excellence</b> from concept to execution, embrace
+                                    <b>inclusivity</b> by designing for diverse lifestyles, and ensure
+                                    <b>adaptability</b> in a dynamic market. Our vision prioritizes sustainability
+                                    and quality, delivering exceptional spaces for the future.
+                                </p>
+                                <button class="btn btn-dark flip-btn">Go Back</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+
+    <!-- CSS for Flip Effect -->
+    <style>
+        /* Flip Card Styles */
+        .flip-card {
+            perspective: 1500px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            transform-style: preserve-3d;
+            transition: transform 0.7s ease-in-out;
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .flip-card-front {
+            z-index: 2;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
+            background: #f8f9fa;
+        }
+
+        .flip-card.flip-active .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        /* Image Styling */
+        .card-img-top {
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* Button Enhancements */
+        .flip-btn {
+            margin-top: 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .flip-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .btn-dark:hover {
+            background-color: #333;
+        }
+    </style>
+
+    <!-- JavaScript for Button Click Flip -->
+    <script>
+        document.querySelectorAll(".flip-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                let card = this.closest(".flip-card");
+                card.classList.toggle("flip-active");
+            });
+        });
+    </script>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
+        <div class="container">
+            <!-- Footer Top Section -->
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-4 border-bottom border-secondary">
+                <!-- Footer Logo (Left) -->
+                <div class="footer-logo">
+                    <img src="img/logo-bg.png" alt="Seacon Properties Logo" class="img-fluid" style="max-width: 200px;">
+                </div>
+
+                <!-- Footer Links & Contact Section (Right Aligned) -->
+                <div class="d-flex flex-column flex-md-row gap-5 text-md-end">
+                    <!-- Quick Links -->
+                    <div>
+                        <h5 class="text-white mb-3">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a class="text-white-50 text-decoration-none" href="about.html">About Us</a></li>
+                            <li><a class="text-white-50 text-decoration-none" href="blogs.html">Blog</a></li>
+                            <li><a class="text-white-50 text-decoration-none" href="project.html">Our Projects</a>
+                            </li>
+                            <li><a class="text-white-50 text-decoration-none" href="contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Get In Touch -->
+                    <div>
+                        <h5 class="text-white mb-3">Get In Touch</h5>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> Hubli</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9902063673 - Er Noor Ahmed</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9886094339 - Er Javed Akbar</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-2"></i> info@example.com</p>
+
+                        <!-- Social Media Icons -->
+                        <div class="d-flex justify-content-end gap-3 pt-2">
+                            <a class="btn p-2" href="#" role="button">
+                                <i class="fab fa-twitter text-primary"></i>
+                            </a>
+                            <a class="btn" href="#"><i class="fab fa-facebook-f text-primary"></i></a>
+                            <a class="btn" href="#"><i class="fab fa-youtube text-primary"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Copyright Section -->
+
+                </div>
+            </div>
+        </div>
+        <div class="container pt-3">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+                <p class="mb-2 mb-md-0">&copy; <a class="text-white-50" href="#">Seacon Properties</a>,
+                    All Rights
+                    Reserved.</p>
+                <p class="mb-0">Designed By <a class="text-white-50" href="https://aspironkhuze.com/">Aspiron Khuze
+                        Technologies Pvt Ltd</a></p>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary text-dark back-to-top" id="backToTop">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://r.search.yahoo.com/_ylt=AwrPri3KVZ5nwJcHf5S7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1739639498/RO=10/RU=https%3a%2f%2fweb.whatsapp.com%2f/RK=2/RS=9AVThN7TL7qEmFURA9Hrs3TMmqE-"
+            class="btn btn-lg btn-success whatsapp-button">
+            <i class="fab fa-whatsapp" style="color: white;"></i>
+        </a>
+
+        <style>
+            /* Style for the Back to Top button (Square) */
+            .back-to-top {
+                position: fixed;
+                bottom: 80px;
+                right: 20px;
+                z-index: 1000;
+                width: 50px;
+                height: 50px;
+                display: none;
+                /* Hidden by default */
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Style for the WhatsApp button (Circular) */
+            .whatsapp-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                background-color: rgb(16, 185, 19);
+            }
+        </style>
+
+        <script>
+            // Show the "Back to Top" button only when scrolled down
+            const backToTopButton = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) { // Show when scrolled down 100px
+                    backToTopButton.style.display = 'flex';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+        </script>
 
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -354,6 +457,6 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
-    </body>
+</body>
 
 </html>

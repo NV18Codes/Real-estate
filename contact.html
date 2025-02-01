@@ -45,28 +45,30 @@
 
 
         <!-- Navbar Start -->
-        <div class="container-fluid bg-dark ">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <a href="index.html" class="navbar-brand d-flex align-items-center">
-                    <img src="img/logo-bg.png" alt="Logo" class="ms-2" height="80">
-                    <h1 class="text-primary mb-0 fs-4 fw-normal ms-3" style="color:#b7937d; font-size: 1.25rem;">
-                        Seacon<span class="text-sm font-medium">-Properties</span>
-                    </h1>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars text-light"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="index.html" class="nav-link ">Home</a></li>
-                        <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
-                        <li class="nav-item"><a href="project.html" class="nav-link">Our Projects</a></li>
-                        <li class="nav-item"><a href="blogs.html" class="nav-link">Blogs</a></li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+        <!-- Navbar Start -->
+    <div class="container-fluid bg-dark sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a href="index.html" class="navbar-brand d-flex align-items-center">
+                <img src="img/logo-bg.png" alt="Logo" class="ms-2 img-fluid"
+                    style="max-height: 120px; object-fit: contain;" width="100%">
+                <h1 class="text-primary mb-0 fs-4 fw-normal ms-3" style="color:#b7937d; font-size: 1.25rem;">
+                    Seacon<span class="text-sm font-medium">-Properties</span>
+                </h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars text-light"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link ">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
+                    <a href="service.html" class="nav-item nav-link "> Services</a>
+                    <a href="project.html" class="nav-item nav-link"> Projects</a>
+                    <li class="nav-item"><a href="blogs.html" class="nav-link">Blogs</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </div>
     <!-- Navbar End -->
 
@@ -125,7 +127,7 @@
                                         <i class="fa fa-phone-alt text-primary"></i>
                                     </div>
                                     <span class="text-dark">+91 9902063673
-                                        |<br> +91 9886094339 </span>
+                                        <br> +91 9886094339 </span>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +175,8 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                    <button class="btn btn-primary text-dark w-100 py-3" type="submit"> Message</button>
+
                                 </div>
                             </div>
                         </form>
@@ -245,8 +248,62 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
+    <a href="#" class="btn btn-lg btn-primary text-dark back-to-top" id="backToTop">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://r.search.yahoo.com/_ylt=AwrPri3KVZ5nwJcHf5S7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1739639498/RO=10/RU=https%3a%2f%2fweb.whatsapp.com%2f/RK=2/RS=9AVThN7TL7qEmFURA9Hrs3TMmqE-" class="btn btn-lg btn-success whatsapp-button">
+        <i class="fab fa-whatsapp" style="color: white;"></i>
+    </a>
+
+    <style>
+        /* Style for the Back to Top button (Square) */
+        .back-to-top {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            display: none;
+            /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the WhatsApp button (Circular) */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: rgb(16, 185, 19);
+        }
+    </style>
+
+    <script>
+        // Show the "Back to Top" button only when scrolled down
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) { // Show when scrolled down 100px
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    </script>
+
+
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

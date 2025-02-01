@@ -6,42 +6,48 @@
  /* Updated Bootstrap Color Variables Based on Logo Shades */
 :root {
     --bs-primary: #b7937d;
-    /* Light brown/gold from the logo */
-    --bs-secondary: #FF6922;
-    /* Accent color (if needed) */
+    /* Gold/Beige - Luxury & Success */
+    --bs-secondary: #001F3F;
+    /* Navy Blue - Trust & Stability */
     --bs-success: #b7937d;
-    /* Similar to primary */
+    /* Keeping Gold/Beige for consistency */
     --bs-green: #b7937d;
-    /* Matching logo tones */
+    /* Matching Gold tones */
     --bs-teal: #b7937d;
     /* Adjusted to match branding */
     --bs-dark: #000000;
     /* Black for contrast */
-    --bs-light: #EFFDF5;
-    /* Light background for balance */
+    --bs-light: #ffffff;
+    /* White - Minimal & Professional */
 
 
---bs-font-sans-serif: system-ui,
--apple-system,
-"Segoe UI",
-Roboto,
-"Helvetica Neue",
-Arial,
-"Noto Sans",
-"Liberation Sans",
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol",
-"Noto Color Emoji";
---bs-font-monospace: SFMono-Regular,
-Menlo,
-Monaco,
-Consolas,
-"Liberation Mono",
-"Courier New",
-monospace;
---bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
+
+
+    :root {
+        --font-primary: "Poppins", sans-serif;
+        --font-secondary: "Montserrat", sans-serif;
+        --font-alternate: "Lato", sans-serif;
+        --font-fallback: "Heebo", sans-serif;
+    }
+
+    /* Apply to the body */
+    body {
+        font-family: var(--font-primary);
+    }
+
+    /* Specific elements */
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-secondary);
+        font-weight: 700;
+    }
+
+    p {
+        font-family: var(--font-alternate);
+    }
+
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))
 }
 
 *,
@@ -58,7 +64,6 @@ monospace;
 
 body {
     margin: 0;
-    font-family: "Heebo", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -154,7 +159,7 @@ h4,
 
 h5,
 .h5 {
-    font-size: 1.25rem
+    font-size: 1.25rem var(--bs-font-sans-serif)
 }
 
 h6,
@@ -250,12 +255,11 @@ a {
 }
 
 a:hover {
-    color: #009472
+    color: #ffffff
 }
 
 a:not([href]):not([class]),
 a:not([href]):not([class]):hover {
-    color: inherit;
     text-decoration: none
 }
 
@@ -2080,7 +2084,7 @@ progress {
     --bs-table-striped-color: #000;
     --bs-table-active-bg: #b8d9d1;
     --bs-table-active-color: #000;
-    --bs-table-hover-bg: #bddfd7;
+    --bs-table-hover-bg: #ffffff;
     --bs-table-hover-color: #000;
     color: #000;
     border-color: #b8d9d1
@@ -2104,7 +2108,7 @@ progress {
     --bs-table-striped-color: #000;
     --bs-table-active-bg: #bcd0c7;
     --bs-table-active-color: #000;
-    --bs-table-hover-bg: #c1d6cc;
+    --bs-table-hover-bg: #ffffff;
     --bs-table-hover-color: #000;
     color: #000;
     border-color: #bcd0c7
@@ -3101,16 +3105,16 @@ fieldset:disabled .btn {
 
 .btn-primary:hover {
     color: #000;
-    background-color: #26c49f;
-    border-color: #1ac099
+    background-color: #ffffff;
+    border-color: #ffffff
 }
 
 .btn-check:focus+.btn-primary,
 .btn-primary:focus {
     color: #000;
-    background-color: #26c49f;
-    border-color: #1ac099;
-    box-shadow: 0 0 0 .25rem rgba(0, 157, 121, 0.5)
+    background-color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 0 0 .25rem rgb(255, 255, 255)
 }
 
 .btn-check:checked+.btn-primary,
@@ -3119,8 +3123,8 @@ fieldset:disabled .btn {
 .btn-primary.active,
 .show>.btn-primary.dropdown-toggle {
     color: #000;
-    background-color: #33c7a5;
-    border-color: #1ac099
+    background-color: #ffffff;
+    border-color: #ffffff
 }
 
 .btn-check:checked+.btn-primary:focus,
@@ -3128,7 +3132,7 @@ fieldset:disabled .btn {
 .btn-primary:active:focus,
 .btn-primary.active:focus,
 .show>.btn-primary.dropdown-toggle:focus {
-    box-shadow: 0 0 0 .25rem rgba(0, 157, 121, 0.5)
+    box-shadow: 0 0 0 .25rem rgb(255, 255, 255)
 }
 
 .btn-primary:disabled,
@@ -6263,7 +6267,6 @@ fieldset:disabled .btn {
     z-index: 1080;
     display: block;
     margin: 0;
-    font-family: "Heebo", sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;
@@ -6390,7 +6393,6 @@ fieldset:disabled .btn {
     z-index: 1070;
     display: block;
     max-width: 276px;
-    font-family: "Heebo", sans-serif;
     font-style: normal;
     font-weight: 400;
     line-height: 1.5;

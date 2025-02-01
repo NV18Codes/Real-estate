@@ -27,6 +27,9 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&family=Lato:wght@300;400;700&family=Montserrat:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap"
+        rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
@@ -34,6 +37,21 @@
 
 <body>
     <div class="container-xxl bg-dark p-0">
+        <!-- Top Bar Start -->
+        <div class="bg-dark text-white py-2 sticky-top">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div>
+                    <span>🚧This website is currently under construction. Stay tuned for updates!</span>
+                </div>
+                <div>
+                    <a href="contact.html" class="btn btn-primary hover:background-color:white text-dark btn-sm">
+                        Reach Us Out
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Top Bar End -->
+
         <!-- Spinner Start -->
         <div id="spinner"
             class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -43,16 +61,20 @@
         </div>
         <!-- Spinner End -->
 
-
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100 sticky-top">
             <div class="container">
                 <!-- Logo & Brand -->
                 <a href="index.html" class="navbar-brand d-flex align-items-center">
-                    <img src="img/logo-bg.png" alt="Logo" class="ms-2" height="60">
-                    <h1 class="text-primary mb-0 fs-5 fw-bold ms-2" style="color:#b7937d;">
-                        Seacon<span class="fw-normal">-Properties</span>
-                    </h1>
+                    <!-- Logo -->
+                    <img src="img/logo-bg.png" alt="Logo" class="ms-2 img-fluid"
+                        style="max-height: 100px; object-fit: contain; width: auto;">
+
+                    <!-- Brand Name (Hidden on Small Screens) -->
+                    <h3 class="text-5xl md:text-6xl font-extrabold font-primary uppercase tracking-wide text-primary"
+                        style="text-shadow: 0px 0px 15px rgba(212, 210, 210, 0.502);">
+                        Seacon Properties
+                    </h3>
                 </a>
 
                 <!-- Toggler Button -->
@@ -66,7 +88,8 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
                         <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="project.html" class="nav-link">Our Projects</a></li>
+                        <a href="service.html" class="nav-item nav-link ">Services</a>
+                        <li class="nav-item"><a href="project.html" class="nav-link">Projects</a></li>
                         <li class="nav-item"><a href="blogs.html" class="nav-link">Blogs</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
@@ -76,44 +99,41 @@
         <!-- Navbar End -->
 
 
-        <!-- Concept Section Start -->
-        <section class="text-gray-600 body-font relative" style="background-image: url('https://cdn.pixabay.com/photo/2018/11/22/23/57/london-3833039_1280.jpg'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat; 
-        min-height: 80vh;">
 
-            <!-- Overlay to blur background and make it opaque -->
+        <!-- Hero Section Start -->
+        <section class="relative text-white body-font" style="
+background-image: url('https://cdn.pixabay.com/photo/2018/11/22/23/57/london-3833039_1280.jpg');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+min-height: 80vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+position: relative;
+">
+
+            <!-- Dark Overlay for Readability -->
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
             <!-- Centered Content -->
-            <div class="absolute inset-0 flex items-center justify-center text-center z-10 px-5 md:px-20">
-                <br><br><br><br><br><br>
-                <div class=" bg-opacity-25 p-8 rounded-xl shadow-xl max-w-3xl mx-auto">
-                    <h1 class="title-font sm:text-5xl text-white text-4xl mb-6 font-semibold text-black">
-                        Seacon Properties <br>We are building something amazing!
-                    </h1>
-                    <p class="bg-primary bg-opacity-25 rounded mb-6 leading-relaxed text-dark text-lg mt-2">
-                        “SEACON” Properties is
-                        a dynamic collaboration of
-                        seasoned professionals
-                        with over 60 years of
-                        combined experience in
-                        architecture, real estate
-                        business, and civil
-                        engineering. Our collective
-                        expertise positions us to
-                        excel in the real estate
-                        development sector. This
-                        project report outlines our
-                        vision, mission, and
-                        comprehensive business
-                        plan to attract potential
-                        investors.
-                </div>
+            <div class="relative z-10 px-6 md:px-16 max-w-4xl text-center">
+                <!-- Glowing Heading -->
+                <h1 class="text-5xl md:text-6xl font-extrabold font-primary uppercase tracking-wide text-white"
+                    style="text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);">
+                    Seacon Properties
+                </h1>
+
+                <!-- Slightly Glowing Tagline -->
+                <h2 class="text-3xl md:text-4xl font-semibold mt-4 text-white"
+                    style="text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); font-style: italic;">
+                    Building Dreams, Creating Legacies
+                </h2>
             </div>
         </section>
+        <!-- Hero Section End -->
 
-
-        <!-- Header End -->
 
 
         <!-- Search Start -->
@@ -258,7 +278,7 @@ Search End -->
                             as affordable selling prices with more returns for the investors
                             when compared to usual market practice.
                         </p>
-                        <a class="btn btn-primary py-3 px-5 mt-3" href="about.html">Read More</a>
+                        <a class="btn btn-primary text-dark py-3 px-5 mt-3" href="about.html">Read More</a>
                     </div>
                 </div>
             </div>
@@ -489,6 +509,7 @@ Search End -->
             </div>
         </div>
         <!-- Team End -->
+        <hr class="my-5">
 
         <!-- Call to Action Start -->
         <div class="container-xxl py-5 bg-light">
@@ -511,7 +532,7 @@ Search End -->
                                         communities we serve. The blueprint is ready; now, let’s craft
                                         the extraordinary.</p>
                                 </div>
-                                <a href="contact.html" class="btn btn-primary py-1 px-2 me-2"><i
+                                <a href="contact.html" class="btn btn-primary py-1 px-2 me-2 text-dark"><i
                                         class="fa fa-phone-alt me-2"></i>Make A
                                     Call</a>
                                 <a href="" class="btn btn-dark py-1 px-2"><i class="fa fa-calendar-alt me-2"></i>Get
@@ -523,62 +544,66 @@ Search End -->
             </div>
         </div>
         <!-- Call to Action End -->
+        <hr class="my-5">
 
 
         <!-- Testimonial Start -->
-        <!-- <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <h1 class="mb-3">Our Clients Say!</h1>
-                <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum
-                    sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testimonial-item bg-light rounded p-3">
-                    <div class="bg-white border rounded p-4">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor
-                            amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg"
-                                style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
+        <div class="container-xxl py-5 bg-light">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Our Clients Say!</h1>
+                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum
+                        sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp text-dark" data-wow-delay="0.1s">
+                    <div class="testimonial-item bg-light rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor
+                                amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid flex-shrink-0 rounded"
+                                    src="https://imgs.search.brave.com/lRo99Nx30aLRu36_7jIZPMVCATzoWQgptCVjQIUzAAM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzE4LzAzLzM1/LzM2MF9GXzExODAz/MzUwNl91TXJobnJq/QldCeFZFOXNZR1Rn/Qmh0OFM1bGlWbkll/WS5qcGc"
+                                    style="width: 45px; height: 45px;">
+                                <div class="ps-3">
+                                    <h6 class="fw-bold mb-1">Client Name</h6>
+                                    <small>Profession</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-item bg-light rounded p-3">
-                    <div class="bg-white border rounded p-4">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor
-                            amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg"
-                                style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
+                    <div class="testimonial-item bg-light rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor
+                                amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid flex-shrink-0 rounded"
+                                    src="https://imgs.search.brave.com/lRo99Nx30aLRu36_7jIZPMVCATzoWQgptCVjQIUzAAM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzE4LzAzLzM1/LzM2MF9GXzExODAz/MzUwNl91TXJobnJq/QldCeFZFOXNZR1Rn/Qmh0OFM1bGlWbkll/WS5qcGc"
+                                    style="width: 45px; height: 45px;">
+                                <div class="ps-3">
+                                    <h6 class="fw-bold mb-1">Client Name</h6>
+                                    <small>Profession</small>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-item bg-light rounded p-3">
-                    <div class="bg-white border rounded p-4">
-                        <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor
-                            amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg"
-                                style="width: 45px; height: 45px;">
-                            <div class="ps-3">
-                                <h6 class="fw-bold mb-1">Client Name</h6>
-                                <small>Profession</small>
+                    <div class="testimonial-item bg-light rounded p-3">
+                        <div class="bg-white border rounded p-4">
+                            <p>Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor
+                                amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
+                            <div class="d-flex align-items-center">
+                                <img class="img-fluid flex-shrink-0 rounded"
+                                    src="https://imgs.search.brave.com/lRo99Nx30aLRu36_7jIZPMVCATzoWQgptCVjQIUzAAM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzE4LzAzLzM1/LzM2MF9GXzExODAz/MzUwNl91TXJobnJq/QldCeFZFOXNZR1Rn/Qmh0OFM1bGlWbkll/WS5qcGc"
+                                    style="width: 45px; height: 45px;">
+                                <div class="ps-3">
+                                    <h6 class="fw-bold mb-1">Client Name</h6>
+                                    <small>Profession</small>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
         <!-- Testimonial End -->
 
         <!-- Footer Start -->
@@ -601,8 +626,10 @@ Search End -->
                             <ul class="list-unstyled">
                                 <li><a class="text-white-50 text-decoration-none" href="about.html">About Us</a></li>
                                 <li><a class="text-white-50 text-decoration-none" href="blogs.html">Blog</a></li>
-                                <li><a class="text-white-50 text-decoration-none" href="project.html">Our Projects</a></li>
-                                <li><a class="text-white-50 text-decoration-none" href="contact.html">Contact Us</a></li>
+                                <li><a class="text-white-50 text-decoration-none" href="project.html">Our Projects</a>
+                                </li>
+                                <li><a class="text-white-50 text-decoration-none" href="contact.html">Contact Us</a>
+                                </li>
                             </ul>
                         </div>
 
@@ -616,13 +643,9 @@ Search End -->
 
                             <!-- Social Media Icons -->
                             <div class="d-flex justify-content-end gap-3 pt-2">
-                                <a class="btn p-2" href="#" role="button">
-                                    <i class="fab fa-twitter text-primary"></i>
-                                </a>
-                                <a class="btn" href="#"><i
-                                        class="fab fa-facebook-f text-primary"></i></a>
-                                <a class="btn" href="#"><i
-                                        class="fab fa-youtube text-primary"></i></a>
+                                <a class="btn" href="#"><i class="fab fa-facebook-f text-primary"></i></a>
+                                <a class="btn" href="#"><i class="fab fa-instagram text-primary"></i></a>
+                                <a class="btn" href="#"><i class="fab fa-linkedin text-primary"></i></a>
                             </div>
                         </div>
                     </div>
@@ -645,7 +668,63 @@ Search End -->
 
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <a href="#" class="btn btn-lg btn-primary text-dark back-to-top" id="backToTop">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://r.search.yahoo.com/_ylt=AwrPri3KVZ5nwJcHf5S7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1739639498/RO=10/RU=https%3a%2f%2fweb.whatsapp.com%2f/RK=2/RS=9AVThN7TL7qEmFURA9Hrs3TMmqE-" class="btn btn-lg btn-success whatsapp-button">
+            <i class="fab fa-whatsapp" style="color: white;"></i>
+        </a>
+
+        <style>
+            /* Style for the Back to Top button (Square) */
+            .back-to-top {
+                position: fixed;
+                bottom: 80px;
+                right: 20px;
+                z-index: 1000;
+                width: 50px;
+                height: 50px;
+                display: none;
+                /* Hidden by default */
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            /* Style for the WhatsApp button (Circular) */
+            .whatsapp-button {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                background-color: rgb(16, 185, 19);
+            }
+        </style>
+
+        <script>
+            // Show the "Back to Top" button only when scrolled down
+            const backToTopButton = document.getElementById('backToTop');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) { // Show when scrolled down 100px
+                    backToTopButton.style.display = 'flex';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+        </script>
+
+
+
     </div>
 
     <!-- JavaScript Libraries -->
