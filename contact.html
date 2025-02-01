@@ -32,7 +32,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-white">
     <div class="container-xxl bg-dark p-0">
         <!-- Spinner Start -->
         <div id="spinner"
@@ -98,8 +98,8 @@
         <!-- Contact Start -->
         <div class="container-xxl py-5 bg-light">
             <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp " data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Contact Us</h1>
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3 text-dark">Contact Us</h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-12">
@@ -133,199 +133,277 @@
                                         <div class="icon me-3" style="width: 45px; height: 45px;">
                                             <i class="fa fa-phone-alt text-primary"></i>
                                         </div>
-                                        <span class="text-dark">+91 9902063673
-                                            <br> +91 9886094339 </span>
+                                        <span class="text-dark">+91 9902063673<br>+91 9886094339</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <iframe class="position-relative rounded w-100 h-100" <iframe
+                        <iframe class="position-relative rounded w-100 h-100"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123115.07069220352!2d75.02674541256958!3d15.357738808779247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb8d6d3a2090b17%3A0xae803e207113397!2sHubballi%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1738263029168!5m2!1sen!2sin"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                     <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.5s">
-                            <p class="mb-4 text-primary">Join us in this exciting phase of growth and evolution. Let's
-                                build not just structures but a legacy that withstands the test of
-                                time. Together, we invite you to shape the future of
-                                construction, leaving an indelible mark on the industry and the
-                                communities we serve. The blueprint is ready; now, let’s craft
-                                the extraordinary.</p>
-                            <form>
+                            <p class="mb-4 text-dark">Join us in this exciting phase of growth and evolution. Let's
+                                build not just structures but a legacy that withstands the test of time. Together, we
+                                invite you to shape the future of construction, leaving an indelible mark on the
+                                industry and the communities we serve. The blueprint is ready; now, let’s craft the
+                                extraordinary.</p>
+                            <form id="contactForm">
                                 <div class="row g-3">
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name"
+                                                required>
                                             <label for="name">Your Name</label>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-floating">
-                                            <input type="email" class="form-control" id="email"
-                                                placeholder="Your Email">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email"
+                                                required>
                                             <label for="email">Your Email</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                            <label for="subject">Subject</label>
+                                            <input type="tel" class="form-control" id="phone" placeholder="Phone Number"
+                                                pattern="[0-9]{10}" required>
+                                            <label for="phone">Phone Number</label>
+                                            <small class="form-text text-muted">Please enter a valid 10-digit phone
+                                                number</small>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="form-floating">
                                             <textarea class="form-control" placeholder="Leave a message here"
-                                                id="message" style="height: 150px"></textarea>
+                                                id="message" style="height: 150px" required></textarea>
                                             <label for="message">Message</label>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <button class="btn btn-primary text-dark w-100 py-3" type="submit">
-                                            Message</button>
+                                        <button class="btn btn-primary text-dark w-100 py-3" type="button"
+                                            id="submitBtn">Message</button>
+                                    </div>
+                                </div>
 
+                                <div id="contactChoice" style="display: none;">
+                                    <p class="text-dark">Would you prefer to be contacted via WhatsApp or Email?</p>
+                                    <link rel="stylesheet"
+                                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+                                    <div class="form-floating mb-3">
+                                        <select class="form-control" id="contactMethod">
+                                            <option value="">Select</option>
+                                            <option value="whatsapp">WhatsApp</option>
+                                            <option value="email">Email</option>
+                                        </select>
+                                        <label for="contactMethod">Contact Method</label>
                                     </div>
                                 </div>
                             </form>
+
+                            <script>
+                                document.getElementById("submitBtn").addEventListener("click", function () {
+                                    // Validate form fields
+                                    const name = document.getElementById("name").value;
+                                    const email = document.getElementById("email").value;
+                                    const phone = document.getElementById("phone").value;
+                                    const message = document.getElementById("message").value;
+
+                                    // Check if all required fields are filled
+                                    if (name === "" || email === "" || phone === "" || message === "") {
+                                        alert("Please fill out all fields before proceeding.");
+                                        return; // Prevent the form from proceeding if fields are empty
+                                    }
+
+                                    // Show contact method selection after all fields are filled
+                                    document.getElementById("contactChoice").style.display = "block";
+                                });
+
+                                document.getElementById("contactMethod").addEventListener("change", function () {
+                                    const selectedOption = document.getElementById("contactMethod").value;
+                                    const name = document.getElementById("name").value;
+                                    const message = document.getElementById("message").value;
+
+                                    // Prepare message to be sent
+                                    const formattedMessage = `Hello, I am ${name}. ${message}`;
+
+                                    if (selectedOption === "whatsapp") {
+                                        // WhatsApp redirection with pre-filled message, encode for special characters
+                                        const whatsappLink = `https://wa.me/919902063673?text=${encodeURIComponent(formattedMessage)}`;
+                                        window.location.href = whatsappLink;
+                                    } else if (selectedOption === "email") {
+                                        // Email redirection with pre-filled subject and body
+                                        const email = document.getElementById("email").value;
+                                        const subject = "Contact Inquiry from " + name;
+                                        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(formattedMessage)}`;
+                                        window.location.href = mailtoLink;
+                                    }
+                                });
+                            </script>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Contact End -->
 
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
-            <div class="container">
-                <!-- Footer Top Section -->
-                <div
-                    class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-4 border-bottom border-secondary">
-                    <!-- Footer Logo (Left) -->
-                    <div class="footer-logo">
-                        <img src="img/logo-bg.png" alt="Seacon Properties Logo" class="img-fluid"
-                            style="max-width: 200px;">
-                    </div>
+                    <!-- Footer Start -->
+                    <div class="container-fluid bg-dark text-white pt-5 mt-5">
+                        <div class="container">
+                            <!-- Footer Top Section -->
+                            <div
+                                class="d-flex flex-column flex-md-row justify-content-between align-items-start pb-4 border-bottom border-secondary">
+                                <!-- Footer Logo (Left) -->
+                                <div class="footer-logo mb-4 mb-md-0 w-full sm:w-1/4">
+                                    <img src="img/logo-bg.png" alt="Seacon Properties Logo" class="img-fluid"
+                                        style="max-width: 200px;">
+                                </div>
 
-                    <!-- Footer Links & Contact Section (Right Aligned) -->
-                    <div class="d-flex flex-column flex-md-row gap-5 text-md-end">
-                        <!-- Quick Links -->
-                        <div>
-                            <h5 class="text-white mb-3">Quick Links</h5>
-                            <ul class="list-unstyled">
-                                <li><a class="text-white-50 text-decoration-none" href="about.html">About Us</a></li>
-                                <li><a class="text-white-50 text-decoration-none" href="blogs.html">Blog</a></li>
-                                <li><a class="text-white-50 text-decoration-none" href="project.html">Our Projects</a>
-                                </li>
-                                <li><a class="text-white-50 text-decoration-none" href="contact.html">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
+                                <!-- Footer Links & Contact Section (Right Aligned) -->
+                                <div class="d-flex flex-column flex-md-row gap-5 text-md-end w-full sm:w-3/4">
+                                    <!-- Quick Links -->
+                                    <div class="mb-4 mb-md-0 w-full sm:w-1/4">
+                                        <h5 class="text-white mb-3">Quick Links</h5>
+                                        <ul class="list-unstyled">
+                                            <li><a class="text-white-50 text-decoration-none" href="about.html">About
+                                                    Us</a></li>
+                                            <li><a class="text-white-50 text-decoration-none" href="blogs.html">Blog</a>
+                                            </li>
+                                            <li><a class="text-white-50 text-decoration-none" href="project.html">Our
+                                                    Projects</a>
+                                            </li>
+                                            <li><a class="text-white-50 text-decoration-none"
+                                                    href="contact.html">Contact Us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
 
-                        <!-- Get In Touch -->
-                        <div>
-                            <h5 class="text-white mb-3">Get In Touch</h5>
-                            <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> Hubli</p>
-                            <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9902063673 - Er Noor Ahmed</p>
-                            <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9886094339 - Er Javed Akbar</p>
-                            <p class="mb-2"><i class="fa fa-envelope me-2"></i> info@example.com</p>
+                                    <!-- Get In Touch Section -->
+                                    <div class="footer-center w-full sm:w-1/4 mb-4 mb-md-0">
+                                        <h5 class="text-white text-lg mb-4">Get In Touch</h5>
+                                        <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> Hubbali</p>
+                                        <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9902063673 - Er Noor Ahmed
+                                        </p>
+                                        <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9886094339 - Er Javed Akbar
+                                        </p>
+                                        <p class="mb-2"><i class="fa fa-envelope me-2"></i> info@example.com</p>
 
-                            <!-- Social Media Icons -->
-                            <div class="d-flex justify-content-end gap-3 pt-2">
-                                <a class="btn" href="#"><i class="fab fa-facebook-f text-primary"></i></a>
-                                <a class="btn" href="#"><i class="fab fa-instagram text-primary"></i></a>
-                                <a class="btn" href="#"><i class="fab fa-linkedin text-primary"></i></a>
+                                        <!-- Social Media Icons -->
+                                        <div class="footer-center w-full sm:w-1/4 mb-4 mb-md-0 ">
+                                            <a class="btn" href="#" aria-label="Facebook"><i
+                                                    class="fab fa-facebook-f text-primary hover:text-blue-600"></i></a>
+                                            <a class="btn" href="#" aria-label="Instagram"><i
+                                                    class="fab fa-instagram text-primary hover:text-pink-500"></i></a>
+                                            <a class="btn" href="#" aria-label="LinkedIn"><i
+                                                    class="fab fa-linkedin text-primary hover:text-blue-700"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- Newsletter Signup Section -->
+                                    <div class="footer-right w-full sm:w-1/4">
+                                        <h5 class="text-white text-lg mb-4">Sign Up </h5>
+                                        <p class="text-white mb-6">Stay updated with the latest news, offers, &
+                                            exclusive deals
+                                            from<br>Seacon Properties.</p>
+
+                                        <!-- Newsletter Signup Form -->
+                                        <form action="/subscribe" method="POST" class="max-w-md mx-auto">
+                                            <input type="email" name="email" placeholder="Enter your email" required
+                                                class="px-4 py-2 border border-gray-300 rounded-md w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                            <button type="submit"
+                                                class="bg-blue-500 text-dark px-6 py-2 rounded-md w-full hover:bg-blue-600 transition duration-300">Subscribe</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Copyright Section -->
+                            <div class="container pt-3">
+                                <div
+                                    class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+                                    <p class="mb-2 mb-md-0">&copy; <a class="text-white-50" href="#">Seacon
+                                            Properties</a>, All
+                                        Rights Reserved.</p>
+                                    <p class="mb-0">Designed By <a class="text-white-50"
+                                            href="https://aspironkhuze.com/">Aspiron
+                                            Khuze Technologies Pvt Ltd</a></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Copyright Section -->
-            <div class="container pt-3">
-                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
-                    <p class="mb-2 mb-md-0">&copy; <a class="text-white-50" href="#">Seacon Properties</a>, All Rights
-                        Reserved.</p>
-                    <p class="mb-0">Designed By <a class="text-white-50" href="https://aspironkhuze.com/">Aspiron Khuze
-                            Technologies Pvt Ltd</a></p>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
+                    <!-- Footer End -->
 
 
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary text-dark back-to-top" id="backToTop">
-            <i class="fa fa-angle-double-up"></i>
-        </a>
+                    <!-- Back to Top -->
+                    <a href="#" class="btn btn-lg btn-primary text-dark back-to-top" id="backToTop">
+                        <i class="fa fa-angle-double-up"></i>
+                    </a>
 
-        <!-- WhatsApp -->
-        <a href="https://r.search.yahoo.com/_ylt=AwrPri3KVZ5nwJcHf5S7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1739639498/RO=10/RU=https%3a%2f%2fweb.whatsapp.com%2f/RK=2/RS=9AVThN7TL7qEmFURA9Hrs3TMmqE-"
-            class="btn btn-lg btn-success whatsapp-button">
-            <i class="fab fa-whatsapp" style="color: white;"></i>
-        </a>
+                    <!-- WhatsApp -->
+                    <a href="https://r.search.yahoo.com/_ylt=AwrPri3KVZ5nwJcHf5S7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1739639498/RO=10/RU=https%3a%2f%2fweb.whatsapp.com%2f/RK=2/RS=9AVThN7TL7qEmFURA9Hrs3TMmqE-"
+                        class="btn btn-lg btn-success whatsapp-button">
+                        <i class="fab fa-whatsapp" style="color: white;"></i>
+                    </a>
 
-        <style>
-            /* Style for the Back to Top button (Square) */
-            .back-to-top {
-                position: fixed;
-                bottom: 80px;
-                right: 20px;
-                z-index: 1000;
-                width: 50px;
-                height: 50px;
-                display: none;
-                /* Hidden by default */
-                justify-content: center;
-                align-items: center;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            }
+                    <style>
+                        /* Style for the Back to Top button (Square) */
+                        .back-to-top {
+                            position: fixed;
+                            bottom: 80px;
+                            right: 20px;
+                            z-index: 1000;
+                            width: 50px;
+                            height: 50px;
+                            display: none;
+                            /* Hidden by default */
+                            justify-content: center;
+                            align-items: center;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        }
 
-            /* Style for the WhatsApp button (Circular) */
-            .whatsapp-button {
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                z-index: 1000;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                background-color: rgb(16, 185, 19);
-            }
-        </style>
+                        /* Style for the WhatsApp button (Circular) */
+                        .whatsapp-button {
+                            position: fixed;
+                            bottom: 20px;
+                            right: 20px;
+                            z-index: 1000;
+                            border-radius: 50%;
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                            background-color: rgb(16, 185, 19);
+                        }
+                    </style>
 
-        <script>
-            // Show the "Back to Top" button only when scrolled down
-            const backToTopButton = document.getElementById('backToTop');
+                    <script>
+                        // Show the "Back to Top" button only when scrolled down
+                        const backToTopButton = document.getElementById('backToTop');
 
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 100) { // Show when scrolled down 100px
-                    backToTopButton.style.display = 'flex';
-                } else {
-                    backToTopButton.style.display = 'none';
-                }
-            });
-        </script>
+                        window.addEventListener('scroll', () => {
+                            if (window.scrollY > 100) { // Show when scrolled down 100px
+                                backToTopButton.style.display = 'flex';
+                            } else {
+                                backToTopButton.style.display = 'none';
+                            }
+                        });
+                    </script>
 
 
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+                    <!-- JavaScript Libraries -->
+                    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+                    <script src="lib/wow/wow.min.js"></script>
+                    <script src="lib/easing/easing.min.js"></script>
+                    <script src="lib/waypoints/waypoints.min.js"></script>
+                    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
+                    <!-- Template Javascript -->
+                    <script src="js/main.js"></script>
 </body>
 
 </html>
