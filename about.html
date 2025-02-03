@@ -542,6 +542,30 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            function handleVideoModal(modalId, videoId) {
+                let modal = document.getElementById(modalId);
+                let video = document.getElementById(videoId);
+
+                modal.addEventListener("shown.bs.modal", function () {
+                    video.currentTime = 0; // Reset to start
+                    video.loop = true; // Enable looping
+                    video.play(); // Auto-play
+                });
+
+                modal.addEventListener("hidden.bs.modal", function () {
+                    video.pause();
+                    video.currentTime = 0; // Reset when closed
+                });
+            }
+
+            // Apply to both videos
+            handleVideoModal("videoModal1", "modalVideo1");
+            handleVideoModal("videoModal2", "modalVideo2");
+        });
+    </script>
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white pt-5 mt-5">
