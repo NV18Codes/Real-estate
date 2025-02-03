@@ -45,16 +45,13 @@
 
 
         <!-- Navbar Start -->
-        <div class="container-fluid bg-dark sticky-top">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+            <div class="container">
+                <!-- Logo -->
                 <a href="index.html" class="navbar-brand d-flex align-items-center">
-                    <!-- Logo -->
-                    <img src="img/logo-bg.png" alt="Logo" class="ms-2 img-fluid"
-                        style="max-height: 100px; object-fit: contain; width: auto;">
-
-                    <!-- Brand Name (Hidden on Small Screens) -->
-                    <h3 class="text-5xl md:text-6xl font-extrabold font-primary uppercase tracking-wide text-primary"
-                        style="text-shadow: 0px 0px 15px rgba(212, 210, 210, 0.502);">
+                    <img src="img/logo-bg.png" alt="Logo" class="img-fluid" style="max-height: 80px;">
+                    <h3 class="ms-2 d-none d-md-block text-primary fw-bold">
                         Seacon Properties
                     </h3>
                 </a>
@@ -64,19 +61,21 @@
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a href="index.html" class="nav-link ">Home</a></li>
-                        <li class="nav-item"><a href="about.html" class="nav-link ">About</a></li>
-                        <a href="service.html" class="nav-item nav-link "> Services</a>
-                        <a href="project.html" class="nav-item nav-link"> Projects</a>
-                        <li class="nav-item"><a href="blogs.html" class="nav-link active">Blogs</a></li>
+
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="service.html" class="nav-link">Services</a></li>
+                        <li class="nav-item"><a href="project.html" class="nav-link">Projects</a></li>
+                        <li class="nav-item"><a href="blogs.html" class="nav-link">Blogs</a></li>
                         <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     </ul>
                 </div>
-            </nav>
-        </div>
-        <!-- Navbar End -->
+            </div>
+        </nav>
+
 
         <div class="container-fluid header bg-white p-0 mt-5" id="new-header">
             <style>
@@ -143,7 +142,7 @@
             </div>
         </div>
         <!-- Header End -->
-        
+
         <!-- <div class="container py-5">
         <div class="text-center mb-5">
             <h2 class="fw-bold"> Blog Posts</h2>
@@ -522,71 +521,62 @@
         <div class="container-fluid bg-dark text-white pt-5 mt-5">
             <div class="container">
                 <!-- Footer Top Section -->
-                <div
-                    class="d-flex flex-column flex-md-row justify-content-between align-items-start pb-4 border-bottom border-secondary">
+                <div class="row pb-4 border-bottom border-secondary">
                     <!-- Footer Logo (Left) -->
-                    <div class="footer-logo mb-4 mb-md-0 w-full sm:w-1/4">
+                    <div class="col-12 col-md-3 text-center text-md-start mb-4">
                         <img src="img/logo-bg.png" alt="Seacon Properties Logo" class="img-fluid"
-                            style="max-width: 200px;">
+                            style="max-width: 180px;">
                     </div>
 
-                    <!-- Footer Links & Contact Section (Right Aligned) -->
-                    <div class="d-flex flex-column flex-md-row gap-5 text-md-end w-full sm:w-3/4">
-                        <!-- Quick Links -->
-                        <div class="mb-4 mb-md-0 w-full sm:w-1/4">
-                            <h5 class="text-white mb-3">Quick Links</h5>
-                            <ul class="list-unstyled">
-                                <li><a class="text-white-50 text-decoration-none" href="about.html">About Us</a></li>
-                                <li><a class="text-white-50 text-decoration-none" href="blogs.html">Blog</a></li>
-                                <li><a class="text-white-50 text-decoration-none" href="project.html">Our Projects</a>
-                                </li>
-                                <li><a class="text-white-50 text-decoration-none" href="contact.html">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
+                    <!-- Quick Links -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <h5 class="text-white mb-3">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a class="text-white-50 text-decoration-none" href="about.html">About Us</a></li>
+                            <li><a class="text-white-50 text-decoration-none" href="blogs.html">Blog</a></li>
+                            <li><a class="text-white-50 text-decoration-none" href="project.html">Our Projects</a></li>
+                            <li><a class="text-white-50 text-decoration-none" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
 
-                        <!-- Get In Touch Section -->
-                        <div class="footer-center w-full sm:w-1/4 mb-4 mb-md-0">
-                            <h5 class="text-white text-lg mb-4">Get In Touch</h5>
-                            <p class="mb-2"><i class="fa fa-map-marker-alt me-2"></i> Hubbali</p>
-                            <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9902063673 - Er Noor Ahmed</p>
-                            <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> 9886094339 - Er Javed Akbar</p>
-                            <p class="mb-2"><i class="fa fa-envelope me-2"></i> info@example.com</p>
-
-                            <!-- Social Media Icons -->
-                            <div class="footer-center w-full sm:w-1/4 mb-4 mb-md-0 ">
-                                <a class="btn" href="#" aria-label="Facebook"><i
-                                        class="fab fa-facebook-f text-primary hover:text-blue-600"></i></a>
-                                <a class="btn" href="#" aria-label="Instagram"><i
-                                        class="fab fa-instagram text-primary hover:text-pink-500"></i></a>
-                                <a class="btn" href="#" aria-label="LinkedIn"><i
-                                        class="fab fa-linkedin text-primary hover:text-blue-700"></i></a>
-                            </div>
+                    <!-- Get In Touch -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <h5 class="text-white mb-3">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt me-2"></i> Hubbali</p>
+                        <p><i class="fa fa-phone-alt me-2"></i> 9902063673 - Er Noor Ahmed</p>
+                        <p><i class="fa fa-phone-alt me-2"></i> 9886094339 - Er Javed Akbar</p>
+                        <p><i class="fa fa-envelope me-2"></i> info@example.com</p>
+                        <!-- Social Media Icons -->
+                        <div class="d-flex gap-3">
+                            <a href="#" class="text-primary"><i class="fab fa-facebook-f fa-lg"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-instagram fa-lg"></i></a>
+                            <a href="#" class="text-primary"><i class="fab fa-linkedin fa-lg"></i></a>
                         </div>
-                        <!-- Newsletter Signup Section -->
-                        <div class="footer-right w-full sm:w-1/4">
-                            <h5 class="text-white text-lg mb-4">Sign Up </h5>
-                            <p class="text-white mb-6">Stay updated with the latest news, offers, & exclusive deals
-                                from<br>Seacon Properties.</p>
+                    </div>
 
-                            <!-- Newsletter Signup Form -->
-                            <form action="/subscribe" method="POST" class="max-w-md mx-auto">
-                                <input type="email" name="email" placeholder="Enter your email" required
-                                    class="px-4 py-2 border border-gray-300 rounded-md w-full mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                                <button type="submit"
-                                    class="bg-blue-500 text-dark px-6 py-2 rounded-md w-full hover:bg-blue-600 transition duration-300">Subscribe</button>
-                            </form>
-                        </div>
+                    <!-- Newsletter Signup -->
+                    <div class="col-12 col-md-3 mb-4">
+                        <h5 class="text-white mb-3">Sign Up</h5>
+                        <p class="text-white">Stay updated with the latest news & exclusive deals.</p>
+                        <form action="/subscribe" method="POST">
+                            <input type="email" name="email" placeholder="Enter your email" required
+                                class="form-control mb-3">
+                            <button type="submit" class="btn btn-primary w-100">Subscribe</button>
+                        </form>
                     </div>
                 </div>
 
                 <!-- Copyright Section -->
-                <div class="container pt-3">
-                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
-                        <p class="mb-2 mb-md-0">&copy; <a class="text-white-50" href="#">Seacon Properties</a>, All
-                            Rights Reserved.</p>
+                <div class="row pt-3 text-center text-md-start">
+                    <div class="col-md-6">
+                        <p class="mb-2">&copy; <a class="text-white-50" href="#">Seacon Properties</a>, All Rights
+                            Reserved.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
                         <p class="mb-0">Designed By <a class="text-white-50" href="https://aspironkhuze.com/">Aspiron
-                                Khuze Technologies Pvt Ltd</a></p>
+                                Khuze
+                                Technologies</a></p>
                     </div>
                 </div>
             </div>
@@ -599,10 +589,10 @@
         </a>
 
         <!-- WhatsApp -->
-        <a href="https://r.search.yahoo.com/_ylt=AwrPri3KVZ5nwJcHf5S7HAx.;_ylu=Y29sbwNzZzMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1739639498/RO=10/RU=https%3a%2f%2fweb.whatsapp.com%2f/RK=2/RS=9AVThN7TL7qEmFURA9Hrs3TMmqE-"
-            class="btn btn-lg btn-success whatsapp-button">
+        <a href="https://web.whatsapp.com/" class="btn btn-lg btn-success whatsapp-button">
             <i class="fab fa-whatsapp" style="color: white;"></i>
         </a>
+
 
         <style>
             /* Style for the Back to Top button (Square) */
